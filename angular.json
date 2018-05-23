@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "shopping-list-recipe-book": {
+    "shopping-list-recipe-list": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/shopping-list-recipe-book",
+            "outputPath": "dist/shopping-list-recipe-list",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -23,6 +23,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -50,18 +51,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "shopping-list-recipe-book:build"
+            "browserTarget": "shopping-list-recipe-list:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "shopping-list-recipe-book:build:production"
+              "browserTarget": "shopping-list-recipe-list:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "shopping-list-recipe-book:build"
+            "browserTarget": "shopping-list-recipe-list:build"
           }
         },
         "test": {
@@ -95,7 +96,7 @@
         }
       }
     },
-    "shopping-list-recipe-book-e2e": {
+    "shopping-list-recipe-list-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,7 +104,7 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "shopping-list-recipe-book:serve"
+            "devServerTarget": "shopping-list-recipe-list:serve"
           }
         },
         "lint": {
@@ -118,5 +119,5 @@
       }
     }
   },
-  "defaultProject": "shopping-list-recipe-book"
+  "defaultProject": "shopping-list-recipe-list"
 }
